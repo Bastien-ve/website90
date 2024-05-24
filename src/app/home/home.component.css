@@ -1,0 +1,76 @@
+/*Background*/
+body {
+  background: linear-gradient(to bottom, red, orange);
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Optional: set a default font family */
+}
+/* Ensure the container takes up the full width and has padding */
+.search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: top 0.3s ease; /* Smooth transition */
+}
+.results {
+  display: grid;
+  padding: 20px;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+
+}
+/* Style the search bar to take up the full width of the container */
+.search-bar {
+  width: calc(100% - 40px); /* Account for padding */
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+form {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+/* Adjust position when scrolled down */
+.scrolled .search-container {
+  top: -60px; /* Adjust based on the search bar height */
+}
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+  .search-bar {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
