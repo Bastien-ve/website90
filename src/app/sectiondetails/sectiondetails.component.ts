@@ -13,6 +13,7 @@ import { Sectionlocation } from '../sectionlocation';
            alt="Exterior photo of {{sectionLocation?.name}}"/>
       <section class="listing-description">
         <h2 class="listing-heading">{{ sectionLocation?.name }} </h2>
+        <h5 class="listing-heading">{{ sectionLocation?.slogan }}</h5>
         <p class="listing-location">{{ sectionLocation?.description }} </p>
       </section>
       <section class="listing-features">
